@@ -1,0 +1,35 @@
+#carroussel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.inverse {
+    flex-direction: row-reverse;
+}
+
+#images figure {
+    width: 40%;
+    display: none;
+}
+
+#images figure.show {
+    display: block;
+}
+
+figure img {
+    width: 100%;
+}
+
+#carroussel .navigation {
+    width: 2%;
+}
+
+#carroussel #images {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

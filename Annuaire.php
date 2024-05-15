@@ -64,11 +64,9 @@ do {
             # code...
             echo "Supprimer un utilisateur \n";
             echo "| Id\t| NOM\t\t| Prénom\t| email\n";
-            for ($i = 0; $i < sizeof($users); $i++) {
+            foreach ($users as $key => $user) {
                 # code...
-                if (isset($users[$i])) {
-                    echo "| " . $i . "\t| " . strtoupper($users[$i]["nom"]) . "\t| " . ucwords(strtolower($users[$i]["prenom"])) . "\t| " . strtolower($users[$i]["email"]) . "\n";
-                }
+                echo "| " . $key . "\t| " . strtoupper($user["nom"]) . "\t| " . ucwords(strtolower($user["prenom"])) . "\t| " . strtolower($user["email"]) . "\n";
             }
             $delete = readline("Quel utilisateur voulez-vous supprimer ? (rentrez son numéro pour le supprimer)\n");
             unset($users[$delete]);
